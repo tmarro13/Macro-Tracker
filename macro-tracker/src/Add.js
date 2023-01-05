@@ -1,17 +1,15 @@
-import { useState } from "react";
+import{ useState } from "react";
 
-const App = () => {
-  const [name, setName] = useState(' ');
+const Create = () => {
+  const [name, setName] = useState('');
   return(
-    <div className= "App">
+    <div className= "Add">
         <h2>Add a food item</h2>
         <form>
             <label>Food name:</label>
             <input
             type= "text"
             required
-            value = {name}
-            onChange={(e) => setName(e.target.value)}
             />
             <label>Calories</label>
             <textarea
@@ -24,10 +22,9 @@ const App = () => {
                 <option value= "3">3</option>
             </select>
             <button>Add Item</button>
-            <p>{name}</p>
         </form>
     </div>
 );
   }
 
-export default App;
+export default Add;
